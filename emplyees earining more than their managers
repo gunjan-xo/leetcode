@@ -1,0 +1,3 @@
+select worker.name AS employee from employee AS worker
+Inner Join employeee AS manager  ON (worker.managerId = manager.Id) 
+where worker.salary>manager.salary;
