@@ -3,3 +3,13 @@ FROM Customers c
 WHERE c.id not in (
 SELECT o.CustomerId FROM Orders o
 );
+----- 2 method
+select
+    Name as Customers
+from
+    Customers
+where
+    Id
+not in(
+    select CustomerId from Orders
+);
